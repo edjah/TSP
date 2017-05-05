@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Euclidean Traveling Salesperson</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+    <svg id="canvas" unselectable="on" oncontextmenu="return false;">
+        <circle id="tmpCirc" cx="0" cy="0" r="20"/>
+    </svg>
+
+    <div id="info">
+        <h1>Traveling Salesperson</h1><br>
+        <div id="properties">
+            <h2>Solutions</h2> <br>
+
+            <h3>Try Every Permutation</h3>
+            <button id="permutations">Run</button><br><br><br>
+
+            <h3>MST Approximation</h3>
+            <button id="mstapprox">Run</button><br><br><br>
+
+
+            <h3>Ant Colony Optimization</h3>
+            Param A<br>
+            <input id="simspeed" class="rangeslider" type="range" value="20" min="0" max="100"/> <br>
+            Param B<br>
+            <input id="simspeed" class="rangeslider" type="range" value="20" min="0" max="100"/> <br>
+            Param C<br>
+            <input id="simspeed" class="rangeslider" type="range" value="20" min="0" max="100"/> <br>
+            <button id="aco">Run</button><br><br><br>
+
+
+            <h2>Layouts</h2>
+
+            <h3>Random</h3>
+            Num<br>
+            <input id="node-count" class="rangeslider" type="range" value="10" min="2" max="50"/> <br>
+            <button id="random">Generate</button><br><br><br>
+
+
+            <h3>Reset</h3>
+            <button id="reset">Reset</button>
+
+
+        </div>
+    </div>
+    <p id="fpscounter" unselectable="on">FPS: </p>
+
+    <script src="engine.js"></script>
+
+</body>
+</html>
